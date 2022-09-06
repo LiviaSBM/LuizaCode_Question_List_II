@@ -19,7 +19,7 @@ class Questao1:
         self.nome = input("Digite o nome:\n")
         self.idade = input("Informe a idade:\n")
         if self.pessoa == "Fisica" or self.pessoa == "fisica":
-            self.cpf = input("Digite o CPF:\n")
+            self.cpf = input("Digite o CPF ou CNPJ:\n")
 
     def fumante(self):
         fum = True
@@ -39,6 +39,9 @@ class Questao1:
     def pf(self):
         return self.pessoa
 
+    def cpf(self):
+        return self.cpf
+
 resolucaoquestao1 = Questao1()
 print(resolucaoquestao1.fumante())
 
@@ -52,4 +55,19 @@ class PessoaFisica:
 
         return self.pessoa
 
-PessoaFisica(resolucaoquestao1.pf())
+#Questão 3:
+#Escreva uma classe “PessoaJurica” e herde Pessoa, agora
+#modificando o comportamento, retorne o cnpj. Crie uma instância e
+#acesse os dados
+
+class PessoaJuridica:
+    def __init__(self, pessoa, cnpj):
+        self.pessoa = pessoa
+        self.cnpj - cnpj
+
+        return self.pessoa
+
+if resolucaoquestao1.pf() == "fisica" or resolucaoquestao1.pf() == "Fisica":
+    PessoaFisica(resolucaoquestao1.pf())
+elif resolucaoquestao1.pf() == "juridica" or resolucaoquestao1.pf() == "Juridica":
+    PessoaJuridica(resolucaoquestao1.pf(), resolucaoquestao1.cpf())
