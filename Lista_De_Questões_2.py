@@ -52,8 +52,9 @@ print(resolucaoquestao1.fumante())
 class PessoaFisica:
     def __init__(self, pessoa):
         self.pessoa = pessoa
-
-        return self.pessoa
+        
+    def __str__(self):
+        return f"Trata-se de Pessoa {self.pessoa}"
 
 #Questão 3:
 #Escreva uma classe “PessoaJurica” e herde Pessoa, agora
@@ -63,11 +64,12 @@ class PessoaFisica:
 class PessoaJuridica:
     def __init__(self, pessoa, cnpj):
         self.pessoa = pessoa
-        self.cnpj - cnpj
+        self.cnpj = cnpj
+    def pessoa(self):
+        
+        return f"Trata-se de Pessoa {self.pessoa}"
 
-        return self.pessoa
-
-if resolucaoquestao1.pf() == "fisica" or resolucaoquestao1.pf() == "Fisica":
-    PessoaFisica(resolucaoquestao1.pf())
-elif resolucaoquestao1.pf() == "juridica" or resolucaoquestao1.pf() == "Juridica":
-    PessoaJuridica(resolucaoquestao1.pf(), resolucaoquestao1.cpf())
+if resolucaoquestao1.pf()[0] == "fisica" or resolucaoquestao1.pf()[0] == "Fisica":
+    print(PessoaFisica(resolucaoquestao1.pf()[0]))
+elif resolucaoquestao1.pf()[0] == "juridica" or resolucaoquestao1.pf()[0] == "Juridica":
+    print(PessoaFisica(resolucaoquestao1.pf()[0]))
