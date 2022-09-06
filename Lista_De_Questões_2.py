@@ -14,7 +14,6 @@ class Questao1:
         self.cpf = ""
         self.idade = ""
         self.pessoa = ""
-        self.fumante = ""
 
         self.pessoa = input("Informe o tipo de pessoa [Fisica/Juridica]:\n")
         self.nome = input("Digite o nome:\n")
@@ -25,24 +24,18 @@ class Questao1:
     def fumante(self):
         fum = True
 
-        self.fumante = input("Favor informar se o indivíduo é fumante ou não. Digite F para fumante e N para não-fumante\n")
+        fumante = input("Favor informar se o indivíduo é fumante ou não. Digite F para fumante e N para não-fumante\n")
         while fum:
-            if self.fumante != "F" and self.fumante != "N" and self.fumante != "n" and self.fumante != "f":
-                self.fumante = input("Informação inválida. Favor informar se o indivíduo é fumante ou não. Digite F para fumante e N para não-fumante")
+            if fumante != "F" and fumante != "N" and fumante != "n" and fumante != "f":
+                fumante = input("Informação inválida. Favor informar se o indivíduo é fumante ou não. Digite F para fumante e N para não-fumante")
             else:
                 fum = False
         
-        if self.fumante == "f" or self.fumante =="F":
-            return f"Segue abaixo dados do usuário\
-            \nNome: {self.nome}\
-            \nIdade {self.idade}\
-            \nTipo de Pessoa: {self.pessoa}\
-            \n{self.nome} é fumante"
-
+        if fumante == "f" or fumante =="F":
+            return f"Segue abaixo dados do usuário\nNome: {self.nome}\nIdade {self.idade}\nTipo de Pessoa: {self.pessoa}\n{self.nome} é fumante"
         else:
-            return f"Segue abaixo dados do usuário\
-            \nNome: {self.nome}\
-            \nIdade {self.idade}\
-            \nTipo de Pessoa: {self.pessoa}\
-            \n{self.nome} é fumante"
+            return f"Segue abaixo dados do usuário\nNome: {self.nome}\nIdade {self.idade}\nTipo de Pessoa: {self.pessoa}\n{self.nome} não é fumante"
+
+resolucaoquestao1 = Questao1()
+print(resolucaoquestao1.fumante())
 
