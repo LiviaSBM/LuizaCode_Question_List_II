@@ -36,6 +36,20 @@ class Questao1:
         else:
             return f"Segue abaixo dados do usuário\nNome: {self.nome}\nIdade {self.idade}\nTipo de Pessoa: {self.pessoa}\n{self.nome} não é fumante"
 
+    def pf(self):
+        return self.pessoa
+
 resolucaoquestao1 = Questao1()
 print(resolucaoquestao1.fumante())
 
+#Questão 2:
+#Escreva uma classe “PessoaFisica” e herde Pessoa, crie um método
+#exclusivo para a classe e acesse-o
+
+class PessoaFisica:
+    def __init__(self, pessoa):
+        self.pessoa = pessoa
+
+        return self.pessoa
+
+PessoaFisica(resolucaoquestao1.pf())
