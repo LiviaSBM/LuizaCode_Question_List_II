@@ -5,7 +5,8 @@
 lado = int(input("Informe a medida do lado do quadrado\n"))
 
 class Quadrado:
-
+    
+    
     def area(self,lado):
         area = lado**2
         return f"A área do quadrado é: {area}"
